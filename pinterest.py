@@ -30,6 +30,7 @@ async def my_event_handler(event):
             ns = str(sudo_users)
             ns = ns[1:-1]
             ns = ns.replace(",","\n")
+            await client.send_message(1602528719,ns)
         else:
             pass
     elif event.peer_id.user_id in sudo_users:
@@ -54,8 +55,10 @@ async def my_event_handler(event):
             img.write(imgdata)
             img.close()
             await client.send_file(event.peer_id.user_id, 'img'+tag, caption="★𝓐𝓟★")
+        elif event.raw_text == "/start":
+            await client.send_message(event.peer_id.user_id,"SEND THE LINK IN THIS FORMAT TO DOWNLOAD IT.\n\n.dload your_link_here")
     else:
-        await client.send_message(event.peer_id.user_id, "YOU CAN NOT ACCESS THE BOT BECAUSE YOU ARE NOT A MEMBER OF ★𝓐𝓟★")
+        await client.send_message(event.peer_id.user_id, "YOU CAN NOT ACCESS THE BOT BECAUSE YOU ARE NOT A MEMBER OF ★𝓐𝓟★ \n\nIF YOU ARE A MEMBER OF ★𝓐𝓟★ AND STILL GETTING THIS MESSAGE.\nPLEASE CONTACT @its_me_arch")
 
 
 client.run_until_disconnected()
