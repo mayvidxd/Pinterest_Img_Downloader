@@ -1,0 +1,2 @@
+# pinterest_img_downloader
+A TELEGRAM BOT DEVLOPED BY ★𝓐𝓟★ TO DOWNLOAD IMAGES FROM PINTEREST.
